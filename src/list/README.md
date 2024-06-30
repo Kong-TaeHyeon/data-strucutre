@@ -48,3 +48,21 @@ ArrayList 는 다른 자료구조와 달리 Object[] 배열(객체 배열)을 �
 데이터의 개수를 알 수 없는데 배열을 쓰고 싶을 때 우리는 List 인터페이스를 구현한 자료구조를 사용할 것이다.  
 왜냐면 사이즈를 정하지 않고 동적으로 활용할 수 있기 때문이다.  
 마지막으로 리스트 계열 자료구조는 **데이터 사이에 빈 공간을 허락하지 않는다.**
+
+---
+
+#### Singly LinkedList
+LinkedList 와 ArrayList 와 가장 큰 차이점이라 한다면 바로 '노드'라는 객체를 이용하여 연결한다는 것이다.
+ArrayList 의 경우 최상위 타입인 오브젝트 배열(Object[])을 사용하여 데이터를 담아두었다면, LinkedList 는 배열을 이용하는 것이 아닌
+하나의 객체를 두고 그 안에 데이터와 다른 노드를 가르키는 레퍼런스 데이터로 구성하여 여러 노드를 하나의 체인처럼 연결하는 것이다.
+
+![SinglyLinkedList.png](../../img/img.png)
+
+#### Doubly LinkedList
+Singly LinkedList 와 비교해서, '이전 노드'를 가르키는 변수가 추가된다.
+![DoublyLinkedList.png](../../img/doublyLinkedList.png)
+
+이렇게 양방향으로 연결되면 무엇이 좋은가? => Singly LinkedList 에 비해 검색(색인) 능력이 좋아진다.  
+단방향으로 연결 된 Singly LinkedList 의 경우, 반드시 head 부터 시작하여 탐색하여다. 
+하지만, Doubly LinkedList 의 경우, 찾으려는 노드가 tail에 가깝다면 tail 부터, head 에 가깝다면 head 부터 탐색하면 되기 때문에
+좀 더 효율적인 탐색이 가능하다.
