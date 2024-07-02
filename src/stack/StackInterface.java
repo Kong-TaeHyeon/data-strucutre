@@ -1,6 +1,6 @@
 package stack;
 
-public interface Stack<E> {
+public interface StackInterface<E> {
 
     /**
      *
