@@ -185,7 +185,7 @@ public class PriorityQueue<E> implements Queue<E>{
         }
     }
 
-    private void siftUpComparator(int index, E target) {
+    private void siftDownComparable(int index, E target) {
         Comparable<? super E> comp = (Comparable<? super E>) target;
 
         array[index] = null;
